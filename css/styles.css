@@ -1,0 +1,568 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@200;300;400;500;600;700&display=swap');
+
+* {
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+}
+
+a {
+    color:black; 
+    text-decoration:none;
+}
+
+h1 {
+    font-size:150%;
+    font-weight:700;
+    margin:0px 0px;
+}
+
+p {
+    margin:10px 0px;
+}
+
+html {
+
+}
+
+body{
+    font-family: Raleway;
+    font-size:95%;
+    font-weight: 500;
+}
+
+.container {
+    flex-wrap: wrap;
+    display: flex;
+    justify-content: center;
+}
+
+.content {
+    width:80%;
+    max-width:1440px;
+}
+
+.flex-auto {
+    flex: 1 1 auto!important;
+}
+
+.wrap {
+    display:flex;
+    flex-wrap: wrap;
+}
+
+.collumn-wrap {
+    display: flex;
+    flex-flow: column wrap;
+    align-content: space-between;
+}
+
+header {
+    width:100%;
+    display:flex;
+    justify-content: space-between;
+    align-items:center;
+    padding-top:30px;
+    margin-bottom:30px;
+}
+
+header #logo {
+    height:50px;
+    padding-left:10px;
+}
+
+ul {
+    list-style: none;
+    padding:0; margin:0;
+    display:flex;
+    flex-direction: row;
+}
+
+header nav ul li a {
+    position:relative;
+    display:block;
+    padding:0px 20px;
+    height:50px;
+    line-height:50px;
+}
+
+header nav ul li a:hover, footer a:hover{
+    color:#0065fc;
+}
+
+header nav ul li a:hover::after {
+    content: '';
+    position:absolute;
+    border-top:2px solid #0065fc;
+    width:100%;
+    bottom:78px; /*30px padding-top header + 50px height nav - 2px of the border top */
+    left:0;
+}
+
+main form#search {
+    position:relative;
+    height:50px;
+    white-space: nowrap;
+}
+
+main form#search > * {
+    height:100%;
+    vertical-align:middle;
+}
+
+main form#search i.place-icon {
+    position:absolute;
+    top:1px;
+    left:1px;
+    line-height:48px;
+    height:48px;
+    width:50px;
+    text-align:center;
+    background-color:#F2F2F2;
+    border-radius:10px 0px 0px 10px;
+    -moz-border-radius:10px 0px 0px 10px;
+}
+
+main form#search input[type="search"] {
+    padding-left:60px;
+    border:1px solid #F2F2F2;
+    border-right:0px;
+    border-radius:10px 0px 0px 10px;
+    -moz-border-radius:10px 0px 0px 10px;
+    font-weight:700;
+    font-size:120%;
+}
+
+main form#search input[type="search"]:focus {
+    outline:none;
+}
+
+main form#search input[type="submit"] {
+    border:none;
+    background-color:#0065fc;
+    color:white;
+    font-weight:700;
+    border-radius:0px 10px 10px 0px;
+    -moz-border-radius:0px 10px 10px 0px;
+    padding:0px 15px;
+    cursor:pointer;
+}
+
+main #filters {
+    font-weight:700;
+    margin-top:30px;
+    font-size:120%;
+    display:flex;
+    flex-direction:row;
+    flex-wrap: wrap;
+}
+
+main #filters > * {
+    height:50px;
+    vertical-align: middle;
+    line-height:50px;
+}
+
+main #filters div:first-child{
+    margin:0px 10px 0px 0px;
+}
+
+main #filters div:not(main #filters div:first-child){
+    margin:0px 10px 15px 10px;
+    position:relative;
+    border:2px solid #e5e5e5;
+    color:#b3b3b3;
+    border-radius:30px;
+    -moz-border-radius:30px;
+    display:flex;
+    flex-direction:row;
+}
+
+main #filters div.active, main #filters div:hover:not(main #filters div:first-child) {
+    border:2px solid #d9d9d9!important;
+    color:black!important;
+}
+
+main #filters div span {
+    display:block;
+    padding:0px 10px;
+}
+
+main #filters div:hover:not(main #filters div:first-child){
+    cursor:pointer;
+}
+
+main #filters div i {
+    height:100%;
+    width:50px;
+    line-height:48px;
+    text-align:center;
+    border-radius:30px;
+    -moz-border-radius:30px;
+    background-color:#DEEBFF;
+    color:#0065fc;
+    margin-left:-2px;
+}
+
+main .info {
+    margin:15px 0px 0px 0px;
+}
+
+main .info .fa-info {
+    margin-right:10px;
+    border-radius: 100%;
+    -moz-border-radius:100%;
+    border:1px solid #d9d9d9;
+    color:#0065fc;
+    height:23px;
+    width:23px;
+    line-height:21px;
+    text-align:center;
+}
+
+main #hostels {
+    display:flex;
+    flex-wrap: wrap;
+    margin-top:30px;
+}
+
+main #hostels .collumn.left {
+    margin-right:2%;
+    flex:0 0 68%;
+}
+
+main #hostels .collumn.right {
+    flex:0 0 30%;
+}
+
+main #hostels .collumn {
+    background-color:#f2f2f2;
+    border-radius:30px;
+    -moz-border-radius:30px;
+    padding:30px;
+    flex-direction: column;
+}
+
+main #hostels .collumn.right h1{
+    background:url('../images/chart-line-up.png') no-repeat 100% 50%;
+    padding-right:29px;
+}
+
+@media screen and (min-width: 769px) {
+    main #hostels .collumn.left .wrap article:nth-child(3n) {
+        margin-right:0;
+    }
+}
+
+main article{
+    background-color:white;
+    padding:5px;
+    box-shadow: -1px 2px 18px -1px rgba(0,0,0,0.31);
+    -moz-box-shadow: -1px 2px 18px -1px rgba(0,0,0,0.31);
+    margin-top:30px;
+}
+
+main #hostels .collumn.left article {
+    width:calc(33.3333% - 20px); /* -20px because we have 2 margin right 30px = 60px and 3 article peer row so 20px * 3 = 60px */
+	align-self: center;
+    margin:30px 30px 0px 0px;
+}
+
+main .collumn article a:hover > .wrap > .body > .title > h3, main .collumn article a:hover > .body > .title > h3{
+    color:#0065fc;
+}
+
+main #hostels .collumn article a:hover > .img > img{
+    width:330px;
+}
+
+main #hostels .collumn.right article a:hover > .wrap > .img > img{
+    width:250px;
+}
+
+main #hostels .collumn article .img {
+    overflow:hidden;
+    position:relative;
+    height:110px;
+}
+
+main #hostels .collumn.right article .img {
+    height:140px
+}
+
+main article{
+    border-radius:15px;
+    -moz-border-radius:15px;
+}
+
+main article .img {
+    border-radius:15px 15px 0px 0px;
+    -moz-border-radius:15px 15px 0px 0px;
+}
+
+main #hostels .collumn.right article .img {
+    border-radius:15px 0px 0px 15px;
+    -moz-border-radius:15px 0px 0px 15px;
+    width:40%;
+}
+
+main #hostels article .img img{
+    width:300px;
+    position:absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    object-fit: contain;
+    transition-property: width;
+    transition-duration: .3s; 
+}
+
+main #hostels .collumn.right article .img img {
+    width:220px;
+}
+
+main #hostels .collumn article .body {
+    padding:10px;
+}
+
+main #hostels .collumn.right article .body {
+    width:60%;
+    display:flex;
+    flex-direction: column;
+}
+
+main article h3 {
+    font-size:105%;
+}
+
+main article h3, main #hostels .collumn article .desc p {
+    margin:0
+}
+
+main #hostels .collumn article .desc {
+    padding:10px 0px 0px 0px;
+    font-size:95%
+}
+
+main #hostels .collumn article .notation {
+    padding-top:10px;
+}
+
+main #hostels .collumn.right article .notation {
+    margin-top:auto
+}
+
+main #hostels .collumn article .notation ul li{
+    margin-right:2px;
+    color:#b3b3b3;
+}
+
+main #hostels .collumn article .notation ul li.active,  main #hostels .collumn article .notation ul li:hover:not(main #hostels .collumn article .notation ul li.active){
+    color:#0065fc;
+}
+
+main #activity {
+    margin-top:60px;
+}
+
+main #activity .wrap {
+    justify-content: space-between;
+}
+
+
+
+main #activity .collumn article {
+    padding:0px;
+}
+
+main #activity .collumn article a {
+    display:block;
+    height:100%;
+}
+
+main #activity .collumn article .img {
+    overflow:hidden;
+    position:relative;
+}
+
+main #activity .collumn article .body {
+    height:58px; 
+}
+
+@media screen and (min-width: 769px) {
+    main #activity .collumn{
+        width:23.6%;
+        height:488px;
+    }
+    
+    main #activity .collumn:nth-child(2n+1) article .img
+    {
+        height:400px;
+    }
+
+    main #activity .collumn:nth-child(4n+2) article:first-child {
+        height:calc(60% - 30px); /* 30px is the margin top */
+    }
+
+    main #activity .collumn:nth-child(4n+2) article:nth-child(2) {
+        height:calc(40% - 30px);
+    }
+
+    main #activity .collumn:nth-child(4n+4) article:first-child {
+        height:calc(48% - 30px);
+    }
+
+    main #activity .collumn:nth-child(4n+4) article:nth-child(2) {
+        height:calc(52% - 30px);
+    }
+
+    main #activity .collumn:nth-child(4n+2) article:nth-child(1) .img,  main #activity .collumn:nth-child(4n+2) article:nth-child(2) .img,
+    main #activity .collumn:nth-child(4n+4) article:nth-child(1) .img,  main #activity .collumn:nth-child(4n+4) article:nth-child(2) .img {
+        height:calc(100% - 58px); /* 58px = size of body and title */
+    }
+}
+
+main #activity .collumn article .img img {
+    width:100%;
+    height:100%;
+    object-fit: cover;
+}
+
+main #activity .collumn article .body {
+    padding:20px;
+}
+
+footer {
+    width:100%;
+    padding:30px;
+    background-color:#f2f2f2;
+    margin-top:30px;
+}
+
+footer .content {
+    display:flex;
+    flex-wrap: wrap;
+    padding:0;
+}
+
+footer .content .flex-auto:first-child{
+    margin-left:0;
+}
+
+footer .content .flex-auto {
+    margin-left:15px;
+}
+
+footer .content a {
+    display:block;
+    margin-bottom:10px;
+}
+
+@media screen and (max-width: 992px) {
+    main #hostels .collumn.left {
+        margin:0px 0px 30px 0px;
+    }
+
+    main #hostels .collumn.left,  main #hostels .collumn.right{
+        flex: 0 0 100%;
+    }
+
+    main #activity .collumn {
+        width:48.6%;
+    }
+
+    main #filters div:first-child {
+        width:100%
+    }
+
+    #filters {
+        margin-top:15px!important;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .content {
+        width:100%;
+    }
+
+    header {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    header nav {
+        width:100%;
+        border-bottom:2px solid #e5e5e5;
+    }
+
+    header nav ul li {
+        width:50%;
+        text-align:center;
+    }
+
+    header nav ul li a:hover::after {
+        bottom:-2px;
+    }
+
+    input[type='search'] {
+        width:230px;
+    }
+
+    main form#search input[type="submit"] {
+        text-indent: -999em;
+        background:url(../images/search.png) no-repeat 50% 50% #0065fc;
+        background-size:40%;
+        width:50px;
+    }
+
+    .inner-padding {
+        padding:0 30px;
+    }
+
+    main #hostels {
+        flex-wrap: wrap-reverse;
+    }
+
+    main #hostels .collumn.right {
+        border-radius:0px!important;
+        -moz-border-radius:0px!important;
+    }
+
+    main #hostels .collumn.left {
+        margin:30px 0px 0px 0px;
+        background-color:transparent;
+    }
+
+    .collumn.left article {
+        width: 100%!important;
+        margin-right:0!important;
+    } 
+
+    main #hostels article .img {
+        height:130px!important;
+    }
+
+    main #hostels article .img img {
+        width:110%;
+    }
+
+    main #hostels .collumn article a:hover > .img > img{
+        width:130%;
+    }
+
+    .content {
+        padding:0;
+    }
+
+    main #activity .collumn {
+        width: 100% !important;
+    }
+
+    main #activity .collumn .img {
+        height:200px!important
+    }
+
+    footer .content .flex-auto {
+        margin-left:0px;
+        width:100%
+    }
+}
